@@ -1,33 +1,42 @@
-import type { FC } from "react";
-import { AbsoluteFill, Audio, Sequence } from "remotion";
-import { HARMONY_SCENES } from "./constants";
-import { SceneRenderer } from "./scenes/SceneRenderer";
-import bgm from "./assets/audio/bgm.wav";
+import React from "react";
+import { AbsoluteFill, Sequence } from "remotion";
+import { S1_Genesis } from "./scenes/S1_Genesis";
+import { S2_Intelligence } from "./scenes/S2_Intelligence";
+import { S3_Security } from "./scenes/S3_Security";
+import { S4_Performance } from "./scenes/S4_Performance";
+import { S5_Synergy } from "./scenes/S5_Synergy";
+import { S6_Outro } from "./scenes/S6_Outro";
 
-export const HarmonyOS6Video: FC = () => {
-  const sceneStarts = HARMONY_SCENES.reduce<number[]>((acc, scene, index) => {
-    if (index === 0) {
-      return [0];
-    }
+export const DURATION_PER_SCENE = 135;
+export const OVERLAP = 15;
 
-    return [
-      ...acc,
-      acc[index - 1] + HARMONY_SCENES[index - 1].durationInFrames,
-    ];
-  }, []);
+const SCENES = [
+  S1_Genesis,
+  S2_Intelligence,
+  S3_Security,
+  S4_Performance,
+  S5_Synergy,
+  S6_Outro,
+];
 
+export const TOTAL_FRAMES =
+  DURATION_PER_SCENE * SCENES.length - OVERLAP * (SCENES.length - 1);
+
+export const HarmonyOS6Video: React.FC = () => {
   return (
-    <AbsoluteFill style={{ backgroundColor: "#eef3ff" }}>
-      <Audio src={bgm} volume={0.3} />
-      {HARMONY_SCENES.map((scene, index) => (
-        <Sequence
-          key={scene.id}
-          from={sceneStarts[index]}
-          durationInFrames={scene.durationInFrames}
-        >
-          <SceneRenderer scene={scene} />
-        </Sequence>
-      ))}
+    <AbsoluteFill style={{ backgroundColor: "#000000" }}>
+      {SCENES.map((Scene, i) => {
+        const startFrame = i * (DURATION_PER_SCENE - OVERLAP);
+        return (
+          <Sequence
+            key={`scene-${i}`}
+            from={startFrame}
+            durationInFrames={DURATION_PER_SCENE}
+          >
+            <Scene />
+          </Sequence>
+        );
+      })}
     </AbsoluteFill>
   );
 };

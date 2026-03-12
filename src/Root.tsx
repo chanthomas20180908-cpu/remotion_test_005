@@ -9,6 +9,7 @@ import { guoyanMd001ExecutiveReviewComposition } from "./components/guoyanMd001E
 import { guoyanMd001PromoComposition } from "./components/guoyanMd001Promo";
 import { guoyanMd001SilentCinematicComposition } from "./components/guoyanMd001SilentCinematic";
 import { harmonyOS6Composition } from "./components/HarmonyOS6";
+import { harmonyOS6PulseComposition } from "./components/HarmonyOS6Pulse";
 
 export const RemotionRoot: FC = () => {
   return (
@@ -21,6 +22,7 @@ export const RemotionRoot: FC = () => {
       <Composition {...guoyanMd001PromoComposition} />
       <Composition {...guoyanMd001SilentCinematicComposition} />
       <Composition {...harmonyOS6Composition} />
+      <Composition {...harmonyOS6PulseComposition} />
     </>
   );
 };
