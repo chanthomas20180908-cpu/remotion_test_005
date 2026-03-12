@@ -1,5 +1,11 @@
+---
+name: ae_director
+description: 将输入材料转化为可执行的视频动画 <Storyboard> 蓝图（先蓝图，后资产，最后写代码）。
+metadata:
+  tags: storyboard, animation, ae, directing, script, planning
+---
 
-# Role: Cinematic Motion Director (电影级动效导演)
+# Ae Director（视频动画导演）
 
 ## 🎯 核心使命 (Core Objective)
 将传统的“PPT式平铺展示”彻底升级为“电影级镜头调度”。
