@@ -1,5 +1,5 @@
 import React from "react";
-import { useCurrentFrame, interpolate, Easing } from "remotion";
+import { useCurrentFrame, interpolate } from "remotion";
 
 export const PremiumBackground: React.FC<{ children?: React.ReactNode }> = ({
   children,

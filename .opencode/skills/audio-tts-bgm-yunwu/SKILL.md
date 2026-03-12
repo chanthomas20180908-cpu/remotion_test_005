@@ -1,5 +1,5 @@
 ---
-name: audio-tts-bgm
+name: audio-tts-bgm-yunwu
 description: 语音与音频资产能力（TTS 配音 + BGM），包含情绪参数、接口选择、本地化与时长精算规则。
 metadata:
   tags: tts, bgm, audio, narration, duration
@@ -17,7 +17,6 @@ metadata:
 - 来自 `<Storyboard>` 的逐 Scene：Voiceover 文本、情绪/语速要求、Scene 时长目标（若已给）
 - 可用鉴权环境变量（按你系统配置）：
   - `$YUNWU_API_KEY`（yunwu.ai）
-  - 或项目环境的其他 key（例如 cloubic 代理的 key）
 
 ## Core rules（强制）
 - 语音必须有情绪参数：情绪类型、强度（1-5）、语速（慢/中/快），关键短语必须强调。

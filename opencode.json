@@ -23,7 +23,7 @@
     "video-create": {
       "description": "制作视频",
       "mode": "primary",
-      "prompt": "{file:/Users/test/code/remotion_test_004_02/video-prompt.md}",
+      "prompt": "{file:/Users/test/code/remotion_test_005/video-prompt.md}",
       "tools": {
         "write": true,
         "edit": true,

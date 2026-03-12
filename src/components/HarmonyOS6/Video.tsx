@@ -1,53 +1,33 @@
-import React from "react";
-import { Series } from "remotion";
-import { S01 } from "./scenes/S01";
-import { S02 } from "./scenes/S02";
-import { S03 } from "./scenes/S03";
-import { S04 } from "./scenes/S04";
-import { S05 } from "./scenes/S05";
-import { S06 } from "./scenes/S06";
-import { S07 } from "./scenes/S07";
-import { S08 } from "./scenes/S08";
-import { S09 } from "./scenes/S09";
-import { S10 } from "./scenes/S10";
-import { S11 } from "./scenes/S11";
+import type { FC } from "react";
+import { AbsoluteFill, Audio, Sequence } from "remotion";
+import { HARMONY_SCENES } from "./constants";
+import { SceneRenderer } from "./scenes/SceneRenderer";
+import bgm from "./assets/audio/bgm.wav";
 
-export const HarmonyOS6Video: React.FC = () => {
+export const HarmonyOS6Video: FC = () => {
+  const sceneStarts = HARMONY_SCENES.reduce<number[]>((acc, scene, index) => {
+    if (index === 0) {
+      return [0];
+    }
+
+    return [
+      ...acc,
+      acc[index - 1] + HARMONY_SCENES[index - 1].durationInFrames,
+    ];
+  }, []);
+
   return (
-    <Series>
-      <Series.Sequence durationInFrames={120}>
-        <S01 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={150}>
-        <S02 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={240}>
-        <S03 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={210}>
-        <S04 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={240}>
-        <S05 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={210}>
-        <S06 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={180}>
-        <S07 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={210}>
-        <S08 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={180}>
-        <S09 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={180}>
-        <S10 />
-      </Series.Sequence>
-      <Series.Sequence durationInFrames={210}>
-        <S11 />
-      </Series.Sequence>
-    </Series>
+    <AbsoluteFill style={{ backgroundColor: "#eef3ff" }}>
+      <Audio src={bgm} volume={0.3} />
+      {HARMONY_SCENES.map((scene, index) => (
+        <Sequence
+          key={scene.id}
+          from={sceneStarts[index]}
+          durationInFrames={scene.durationInFrames}
+        >
+          <SceneRenderer scene={scene} />
+        </Sequence>
+      ))}
+    </AbsoluteFill>
   );
 };
