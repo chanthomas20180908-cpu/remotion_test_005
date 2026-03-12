@@ -13,12 +13,16 @@ import { harmonyOS6PulseComposition } from "./components/HarmonyOS6Pulse";
 import { harmonyOS6PromoComposition } from "./components/harmonyos6Promo";
 import { harmonyOS6CinematicComposition } from "./components/HarmonyOS6Cinematic";
 import { HuaweiWatch5Composition } from "./components/HuaweiWatch5/Video";
+import { harmonyOS6SixShotsWebComposition } from "./components/HarmonyOS6SixShotsWeb";
 
 import { HarmonyOS6OfficialPromoConfig } from "./components/HarmonyOS6OfficialPromo";
+
+import { harmonyOS6HighEndPromoConfig } from "./components/HarmonyOS6HighEndPromo";
 
 export const RemotionRoot: FC = () => {
   return (
     <>
+      <Composition {...harmonyOS6HighEndPromoConfig} />
       <HarmonyOS6OfficialPromoConfig />
       <HuaweiWatch5Composition />
       <Composition {...guoyanMd001AELaunchComposition} />
@@ -32,6 +36,7 @@ export const RemotionRoot: FC = () => {
       <Composition {...harmonyOS6PulseComposition} />
       <Composition {...harmonyOS6PromoComposition} />
       <Composition {...harmonyOS6CinematicComposition} />
+      <Composition {...harmonyOS6SixShotsWebComposition} />
     </>
   );
 };
