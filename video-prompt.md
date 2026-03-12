@@ -10,8 +10,8 @@
 
 ## 阶段一：蓝图规划 (Storyboarding & Directing)
 
-- **动作**：编写代码前，调用【分镜结构化导演能力】解析材料。
-- **输出**：强制输出结构化的 `<Storyboard>` 计划表作为全片蓝图。绝不允许在没有清晰分镜蓝图的情况下直接编码。
+- **动作**：编写代码前，调用【视频动画导演能力】解析材料。
+- **输出**：强制输出视频动画的 `<Storyboard>` 计划表作为全片蓝图。绝不允许在没有清晰分镜蓝图的情况下直接编码。
 
 ## 阶段二：资产准备与调度 (Orchestration)
 
@@ -34,7 +34,7 @@
 
 ## 阶段一：蓝图规划
 
-- `storyboard-director`：产出结构化 `<Storyboard>`，作为全片唯一蓝图。
+- `ae-director`：产出视频动画的 `<Storyboard>`，作为全片唯一蓝图。
 - `motion-graphic-director`：测试阶段强制调用，不允许跳过。必须先做 script analysis、visual ideation、pacing architecture、frame timing 规划，再进入实现。
 
 ## 阶段二：资产准备与调度
@@ -53,7 +53,7 @@
 
 ## 调用优先级与组合规则
 
-- 测试阶段默认强制组合：`storyboard-director` + `motion-graphic-director` → `audio-tts-bgm` / `visual-assets`（按资产是否需要执行）→ `motion-animation-redlines` + `video-motion-graphics` + `gsap-animation` + `remotion-best-practices` + `remotion-video-production` + `remotion`。
+- 测试阶段默认强制组合：`ae-director` + `motion-graphic-director` → `audio-tts-bgm` / `visual-assets`（按资产是否需要执行）→ `motion-animation-redlines` + `video-motion-graphics` + `gsap-animation` + `remotion-best-practices` + `remotion-video-production` + `remotion`。
 - `motion-graphic-director` 负责“先设计再编码”；`video-motion-graphics` 负责“动画原则”；`gsap-animation` 负责“模板示例”；`remotion` 负责“补充实现范式”。
 - 若多个 skill 有冲突，优先级为：**工程红线 > 分镜蓝图 > frame timing 文档 > 动画原则参考 > 模板示例**。
 
@@ -63,10 +63,7 @@
 - 严禁在没有 frame timing 规划时直接写复杂多段动画。
 - 严禁把 skill 当作“灵感列表”草率浏览后直接实现；必须先把参考结果转译为当前视频的 Scene 级方案、节奏点和帧级时序。
 - 若使用 `gsap-animation` 或 `remotion` 中的模板示例，必须先检查是否符合当前项目的 Remotion 时间轴架构、目录隔离规范与视觉基调，禁止生搬硬套。
-- 在开始编码前，必须先输出一段 `Skills used` 清单，逐项列出本次实际调用的 skill，且至少包含：`motion-graphic-director`、`video-motion-graphics`、`gsap-animation`、`remotion`。
-- 若上述 4 个新增 skill 已出现在 `available_skills` 中，则禁止以“我判断当前不需要”为理由跳过；测试阶段必须使用。
 - 最终交付时，必须补充一段 `Skill usage report`，说明这 4 个新增 skill 分别在哪个阶段被使用，以及各自产出了什么约束、参考或模板依据。
-- 若未输出 `Skills used` 或 `Skill usage report`，视为未遵守 SOP，禁止进入或完成编码阶段。
 
 ---
 
