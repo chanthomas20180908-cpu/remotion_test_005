@@ -5,7 +5,8 @@
   "provider": {
     "google": {
       "options": {
-        "baseURL": "https://api.whatai.cc/v1"
+        "apiKey": "{env:GEMINI_API_KEY}",
+        "baseURL": "https://generativelanguage.googleapis.com/v1beta"
       }
     },
     "anthropic": {
