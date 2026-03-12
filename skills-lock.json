@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "gsap-animation": {
+      "source": "notedit/happy-skills",
+      "sourceType": "github",
+      "computedHash": "59b6f5dadf39f48a5fe9f459430f454ca30383bab71899ba8db44f168a449fbd"
+    },
+    "motion-graphic-director": {
+      "source": "maizecobra/motion-graphic-director-skill",
+      "sourceType": "github",
+      "computedHash": "53ae07c124e61cfa73b8f20b434aa7bd546431ac705cb893b5ead575361b3152"
+    },
+    "remotion": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "1935bd7d3380ada4f9cec68532276cbfa63ec658d55d296d991768885565de23"
+    },
+    "video-motion-graphics": {
+      "source": "dylantarre/animation-principles",
+      "sourceType": "github",
+      "computedHash": "6b82db9dbef273739ac97bd34657fcd2d92420905dad40823e676671c0c85c01"
+    }
+  }
+}
