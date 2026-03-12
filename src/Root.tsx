@@ -12,10 +12,15 @@ import { harmonyOS6Composition } from "./components/HarmonyOS6";
 import { harmonyOS6PulseComposition } from "./components/HarmonyOS6Pulse";
 import { harmonyOS6PromoComposition } from "./components/harmonyos6Promo";
 import { harmonyOS6CinematicComposition } from "./components/HarmonyOS6Cinematic";
+import { HuaweiWatch5Composition } from "./components/HuaweiWatch5/Video";
+
+import { HarmonyOS6OfficialPromoConfig } from "./components/HarmonyOS6OfficialPromo";
 
 export const RemotionRoot: FC = () => {
   return (
     <>
+      <HarmonyOS6OfficialPromoConfig />
+      <HuaweiWatch5Composition />
       <Composition {...guoyanMd001AELaunchComposition} />
       <Composition {...guoyanMd001CineFlowComposition} />
       <Composition {...guoyanMd001ExecutiveReviewComposition} />
