@@ -30,6 +30,16 @@
         "edit": true,
         "bash": true
       }
+    },
+    "code-agent": {
+      "description": "code-agent",
+      "mode": "primary",
+      "prompt": "{file:/Users/test/code/remotion_test_005/code-agent-prompt.md}",
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
     }
   }
 }

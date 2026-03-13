@@ -12,6 +12,8 @@ import { harmonyOS6Composition } from "./components/HarmonyOS6";
 import { epsonWideBannerV2Composition } from "./components/epsonWideBannerV2";
 import { harmonyos6SixShotsComposition } from "./components/harmonyos6SixShots";
 import { guoyanMd001Template001Wide20sComposition } from "./components/guoyanMd001Template001Wide20s";
+import { mvpHarmonyOS6Composition } from "./mvpVideo";
+import { templateTest001WideComposition } from "./components/templateTest001Wide";
 
 export const RemotionRoot: FC = () => {
   return (
@@ -26,7 +28,9 @@ export const RemotionRoot: FC = () => {
       <Composition {...epsonBannerComposition} />
       <Composition {...harmonyOS6Composition} />
       <Composition {...harmonyos6SixShotsComposition} />
+      <Composition {...mvpHarmonyOS6Composition} />
       <Composition {...guoyanMd001Template001Wide20sComposition} />
+      <Composition {...templateTest001WideComposition} />
     </>
   );
 };
