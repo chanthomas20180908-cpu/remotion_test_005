@@ -177,8 +177,8 @@ def print_timeline(
     durations: list[int],
     transition_duration: int,
     fps: int,
-    scene_names: list[str] | None = None,
-    last_anim_locals: list[int] | None = None,
+    scene_names=None,
+    last_anim_locals=None,
 ):
     n = len(durations)
     if scene_names is None:

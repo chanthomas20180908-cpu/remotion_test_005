@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.443" height="17.531" viewBox="0 0 13.443 17.531">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#818181"/>
+      <stop offset="0.284" stop-color="#aeaeae"/>
+      <stop offset="1" stop-color="#f1f1f1"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="矩形_35619" data-name="矩形 35619" d="M0,0H13.443V17.532H0Z" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="路径_31276" data-name="路径 31276" d="M6.676,0,0,8.73H4.1c.036,2.3-.181,7.732-2.981,8.8,0,0,7.812-.91,8.655-8.8h3.67Z" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="蒙版组_60160" data-name="蒙版组 60160" clip-path="url(#clip-path)">
+    <g id="组_61740" data-name="组 61740">
+      <g id="组_61739" data-name="组 61739" clip-path="url(#clip-path-2)">
+        <path id="矩形_35618" data-name="矩形 35618" d="M0,0H13.488V17.322H0Z" transform="translate(-0.057 -0.057)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+.remotion-reset {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.remotion-reset h1,
+.remotion-reset h2,
+.remotion-reset p,
+.remotion-reset div,
+.remotion-reset span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+  color: inherit;
+}

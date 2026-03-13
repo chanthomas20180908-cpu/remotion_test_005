@@ -20,6 +20,7 @@ import sys
 import wave
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 
 def parse_speakers(speakers_str: str) -> dict[str, str]:
@@ -52,7 +53,7 @@ def generate_tts(
     output_name: str = "tts_output",
     use_timestamp: bool = True,
     stream: bool = False,
-    speakers: dict[str, str] | None = None,
+    speakers: Optional[dict[str, str]] = None,
 ) -> str:
     """
     Generate TTS audio using Gemini API.

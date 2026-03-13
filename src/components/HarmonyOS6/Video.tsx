@@ -1,42 +1,34 @@
-import React from "react";
-import { AbsoluteFill, Sequence } from "remotion";
-import { S1_Genesis } from "./scenes/S1_Genesis";
-import { S2_Intelligence } from "./scenes/S2_Intelligence";
-import { S3_Security } from "./scenes/S3_Security";
-import { S4_Performance } from "./scenes/S4_Performance";
-import { S5_Synergy } from "./scenes/S5_Synergy";
-import { S6_Outro } from "./scenes/S6_Outro";
-
-export const DURATION_PER_SCENE = 135;
-export const OVERLAP = 15;
-
-const SCENES = [
-  S1_Genesis,
-  S2_Intelligence,
-  S3_Security,
-  S4_Performance,
-  S5_Synergy,
-  S6_Outro,
-];
-
-export const TOTAL_FRAMES =
-  DURATION_PER_SCENE * SCENES.length - OVERLAP * (SCENES.length - 1);
+import { AbsoluteFill, Series } from "remotion";
+import { Scene1_Opener } from "./scenes/Scene1_Opener";
+import { Scene2_Intelligence } from "./scenes/Scene2_Intelligence";
+import { Scene3_Security } from "./scenes/Scene3_Security";
+import { Scene4_Performance } from "./scenes/Scene4_Performance";
+import { Scene5_Usability } from "./scenes/Scene5_Usability";
+import { Scene6_Closer } from "./scenes/Scene6_Closer";
 
 export const HarmonyOS6Video: React.FC = () => {
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000000" }}>
-      {SCENES.map((Scene, i) => {
-        const startFrame = i * (DURATION_PER_SCENE - OVERLAP);
-        return (
-          <Sequence
-            key={`scene-${i}`}
-            from={startFrame}
-            durationInFrames={DURATION_PER_SCENE}
-          >
-            <Scene />
-          </Sequence>
-        );
-      })}
+    <AbsoluteFill className="remotion-reset">
+      <Series>
+        <Series.Sequence durationInFrames={90}>
+          <Scene1_Opener />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <Scene2_Intelligence />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <Scene3_Security />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={90}>
+          <Scene4_Performance />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <Scene5_Usability />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={90}>
+          <Scene6_Closer />
+        </Series.Sequence>
+      </Series>
     </AbsoluteFill>
   );
 };
