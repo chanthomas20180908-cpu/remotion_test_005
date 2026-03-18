@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b84ff;
+  color: #e8e5d8;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+}
+
+.page {
+  width: 100%;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+}
+
+.lines-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  flex: 0 0 20vh;
+}
+
+.line-text {
+  margin: 0;
+  font-size: min(11vw, 177px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  text-align: center;
+  white-space: nowrap;
+  transform: scale(0.5);
+  transform-origin: center center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.okay-container {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 9999;
+  max-width: 180px;
+  color: white;
+}
+
+#okaydev-logo {
+  width: 100%;
+  margin-bottom: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.okay-description {
+  color: #ccc;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(34, 34, 34, 0.25);
+  padding: 3px 5px;
+  display: inline;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  font-size: 8.55px;
+  line-height: 1.75em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.okay-description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

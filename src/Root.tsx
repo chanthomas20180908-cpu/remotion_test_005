@@ -9,6 +9,8 @@ import { guoyanMd001SilentCinematicComposition } from "./components/guoyanMd001S
 import { epsonWideBannerComposition } from "./components/epsonWideBanner";
 import { epsonBannerComposition } from "./components/EpsonBanner";
 import { harmonyOS6Composition } from "./components/HarmonyOS6";
+import { harmonyOS6GridDrivenComposition } from "./components/HarmonyOS6GridDriven";
+import { harmonyOS6OfficialGridDrivenComposition } from "./components/HarmonyOS6OfficialGridDriven";
 import { epsonWideBannerV2Composition } from "./components/epsonWideBannerV2";
 import { harmonyos6SixShotsComposition } from "./components/harmonyos6SixShots";
 import { guoyanMd001Template001Wide20sComposition } from "./components/guoyanMd001Template001Wide20s";
@@ -27,6 +29,8 @@ export const RemotionRoot: FC = () => {
       <Composition {...epsonWideBannerV2Composition} />
       <Composition {...epsonBannerComposition} />
       <Composition {...harmonyOS6Composition} />
+      <Composition {...harmonyOS6GridDrivenComposition} />
+      <Composition {...harmonyOS6OfficialGridDrivenComposition} />
       <Composition {...harmonyos6SixShotsComposition} />
       <Composition {...mvpHarmonyOS6Composition} />
       <Composition {...guoyanMd001Template001Wide20sComposition} />
